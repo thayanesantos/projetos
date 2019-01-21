@@ -1,30 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Primeiro JS</title>
-<meta charset="utf-8">
+  <title>Primeiro JS</title>
+  <meta charset="utf-8">
+  <style>
+  #principal {width: 95%;margin: 10px auto 10px;border: 1px solid #66068e30;background-color: #FFF;font-family: Arial, Helvetica, sans-serif;}
+  #topo { width:100%;}
+  nav { width: 100%; background-color: #5D240A }
+  nav ul { list-style:none; margin:0; padding:4px; text-align: -webkit-center; }
+  nav ul li { display:inline-block }
+  nav ul li a { font-size: 0.85em; text-decoration: none; color: #FFF; padding: 4px 20px }
+  nav ul li a:hover { background-color: #B4531A }
+  p { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0.9em; color:#000; line-height:1.8 }
+  li { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0.9em; color:white; line-height:1.8 }
+  h1, h4 { font-family: sans-serif;color: #66068e; text-align: -webkit-center; }
+  h1 { font-size: 2.6em;margin: 15px 5px; }
+  h4 { font-size:1.6em; margin:0 5px; }
+  .imgs-teste { width: 100%; text-align: -webkit-center; position: relative;}
+  .imgs-teste section {display: -webkit-inline-box;xposition: relative;}
+  aside {float: left;width: 15%; border-bottom: 1px #66068e solid;border-top: 1px #66068e solid; padding: 30px 7px 0; margin-right: 20px; margin-bottom: 20px;}
+</style>
 
 <script>
-   function mostraResultado()
-   {
-    var numero1 = 10;
-    var numero2 = 15;
+ function mostraResultado()
+ {
+  var numero1 = 10;
+  var numero2 = 15;
 
-    var resultado = numero1 + numero2;
+  var resultado = numero1 + numero2;
 
-    document.getElementById('resultado').innerHTML = resultado;
-    }
+  document.getElementById('resultado').innerHTML = resultado;
+}
   // alert(resultado);
 </script>
 
 </head>
 <body>
-   <h2>JS</h2>
-   <p>Exemplo de HTML com JavaScript</p>
+  <main id="principal">
+    <header id="topo"><h1>Primeiro JavaScript</h1></header>
 
-   <!-- mostrar resultado do JS com html -->
-   <p>10 + 15 = <strong id='resultado'></strong></p>
+    <nav>
+      <ul>
+        <li>HOME</li>
+        <li>EXE2</li>
+        <li>EXE3</li>
+        <li>EXE4</li>
+        <li>EXE5</li>
+        <li>EXE6</li>
+      </ul>
+    </nav>
+    <div>
+      <h2>JS</h2>
+      <p>Exemplo de HTML com JavaScript</p>
 
-   <input type="button" onclick="mostraResultado()" value="Calcular" id="botao">
+      <!-- mostrar resultado do JS com html -->
+      <p>10 + 15 = <strong id='resultado'></strong></p>
+
+      <input type="button" onclick="mostraResultado()" value="Calcular" id="botao">
+
+      <aside><h3>conteúdo de destaque da page</h3></aside>
+    </div>
+
+    <div class="imgs-teste">
+      <section>
+        <img src="https://via.placeholder.com/300x250" alt="">
+      </section>
+      <section>
+        <img src="https://via.placeholder.com/300x250" alt="">
+      </section>
+      <section>
+        <img src="https://via.placeholder.com/300x250" alt="">
+      </section>
+    </div>
+    
+  </main>
+
+
 </body>
 </html>
