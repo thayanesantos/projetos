@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Primeiro JS</title>
+<meta charset="utf-8">
+
+<script>
+   function mostraResultado()
+   {
+    var numero1 = 10;
+    var numero2 = 15;
+
+    var resultado = numero1 + numero2;
+
+    document.getElementById('resultado').innerHTML = resultado;
+    }
+  // alert(resultado);
+</script>
+
+</head>
+<body>
+   <h2>JS</h2>
+   <p>Exemplo de HTML com JavaScript</p>
+
+   <!-- mostrar resultado do JS com html -->
+   <p>10 + 15 = <strong id='resultado'></strong></p>
+
+   <input type="button" onclick="mostraResultado()" value="Calcular" id="botao">
+</body>
+</html>
