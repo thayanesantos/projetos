@@ -1,26 +1,30 @@
-let message: string = "Help me, Obi-wan Kenobi. You're my only hope"
-console.log(message)
-
-let episode: number = 4
-//episode = '4'
-console.log("This is epispode " + 4)
-episode = episode + 1
-console.log("Next episode is " + episode)
-
-let favoriteDroid: string
-favoriteDroid = 'BB-8'
-console.log("My favorite droid is " + favoriteDroid)
-
-let isEnoutghToBeatMF = function (parsecs: number): boolean {
-    return parsecs < 12
+class Spacecraft{
+    constructor (public propulsor: string){}
+    jumpIntoHyperspace() {
+        console.log(`Entering hyperspace with ${this.propulsor}`)
+    }
 }
-let distance = 11
-console.log(`Is ${distance} parsecs enough to beat Millennium Falcon? ${isEnoutghToBeatMF(distance) ? 'YES' : 'NO'}`)
-let call = (name: string) => console.log(`Do you copy, ${name}?`)
-call('R1')
+let ship = new Spacecraft('hyperdrive')
+ship.jumpIntoHyperspace()
 
-function inc (speed: number, inc: number = 1) : number {
-    return speed + inc
+class MillenniumFalcon extends Spacecraft {
+    cargoContainers: number
+    constructor(){
+        super('hyperdrive')
+        this.cargoContainers = 2
+    }
+    jumpIntoHyperspace(){
+        if (Math.random() >= 0.5){
+            super.jumpIntoHyperspace()
+        }else {console.log('failed to jump into hyperspace')}
+    }
 }
-console.log(`inc (5, 1) = ${inc(5,1)}`)
-console.log(`inc (5) = ${inc(5)}`)
+let falcon = new MillenniumFalcon()
+falcon.jumpIntoHyperspace()
+
+interface Containership {
+    cargoContainers: number
+}
+
+let goodFortheJob = (ship: Containership) => ship.cargoContainers > 2
+console.log(`Is falcon good for the job? ${goodFortheJob (falcon) ? 'yes': 'no'}`)
